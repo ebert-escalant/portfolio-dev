@@ -3,7 +3,7 @@ import GitHub from "@icons/GitHub.astro"
 
 const { project } = Astro.props
 ---
-<article class="border border-neutral-700/20 shadow hover:bg-neutral-700/20 p-4 rounded">
+<article class="border border-neutral-700/20 shadow hover:bg-gray-300/30 dark:hover:bg-neutral-700/20 p-4 rounded">
 	<h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">{project.title}</h3>
 	<p class="text-base font-normal text-gray-500 dark:text-gray-300">{project.description}</p>
 	<figure class="my-4">
@@ -11,13 +11,13 @@ const { project } = Astro.props
 	</figure>
 	<div class="flex items-center gap-x-4">
 		{project.github && (
-			<a href={project.github} target="_blank" rel="noopener noreferrer" class="flex flex-1 justify-center items-center gap-x-2 py-0.5 px-2 text-gray-300 hover:text-gray-50 border border-gray-500 rounded-full hover:border-gray-400">
+			<a href={project.github} target="_blank" rel="noopener noreferrer" class="flex flex-1 justify-center items-center gap-x-2 py-0.5 px-2 border text-gray-800 hover:text-black border-gray-600 hover:border-gray-950 dark:text-gray-300 dark:hover:text-gray-50 dark:border-gray-500 rounded-full dark:hover:border-gray-400">
 				<GitHub class="size-4" />
 				<span>Ver Código</span>
 			</a>
 		)}
 		{project.url && (
-			<a href={project.url} target="_blank" rel="noopener noreferrer" class="flex flex-1 justify-center items-center gap-x-2 py-0.5 px-2 text-gray-300 hover:text-gray-50 border border-gray-500 rounded-full hover:border-gray-400">
+			<a href={project.url} target="_blank" rel="noopener noreferrer" class="flex flex-1 justify-center items-center gap-x-2 py-0.5 px-2 border text-gray-800 hover:text-black border-gray-600 hover:border-gray-950 dark:text-gray-300 dark:hover:text-gray-50 dark:border-gray-500 rounded-full dark:hover:border-gray-400">
 				<span>Ver Proyecto</span>
 			</a>
 		)}

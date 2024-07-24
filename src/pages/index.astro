@@ -10,6 +10,7 @@ import Briefcase from '@icons/Briefcase.astro'
 import Code from '@icons/Code.astro'
 import School from '@icons/School.astro'
 import Sliders from '@icons/Sliders.astro'
+import MessageCode from '@/icons/MessageCode.astro'
 
 import Experience from '@/sections/Experience.astro'
 import Projects from '@/sections/Projects.astro'
@@ -21,13 +22,13 @@ import Skills from '@/sections/Skills.astro'
 	<main class="max-w-4xl mx-auto w-full h-full flex flex-col px-2 pt-4 pb-10">
 		<SectionContainer id="about">
 			<div class="flex gap-x-4">
-				<figure class="hidden md:flex justify-center items-center object-fit flex-shrink-0 relative">
-					<img src="/development.webp" class="rounded" alt="">
+				<figure class="hidden md:flex justify-center items-center object-fit flex-shrink-0 relative w-[256px] h-[256px]">
+					<img src="/development.webp" class="rounded" alt="Ebert Escalante" loading="lazy" />
 				</figure>
 				<div class="flex flex-col flex-1">
 					<div class="flex items-center">
 						<a
-							href="https://linkedin.com/in/midudev"
+							href="https://linkedin.com/in/ebert-escalante"
 							target="_blank"
 							rel="noopener"
 							class="flex items-center transition md:justify-center md:hover:scale-105"
@@ -85,11 +86,13 @@ import Skills from '@/sections/Skills.astro'
 			<Sliders class="size-7" slot="icon" />
 			<Skills	/>
 		</SectionContainer>
-		<SectionContainer>
-			<h1 class="text-4xl font-bold text-center">Welcome to Astro</h1>
-			<p class="text-lg text-center mt-4">
-				Build faster websites with less client-side Javascript.
-			</p>
+		<SectionContainer id="contact" title="Contacto">
+			<MessageCode class="size-7" slot="icon" />
+			<div>
+				<p class="text-lg text-gray-800 dark:text-white">
+					¿Tienes alguna pregunta o simplemente quieres saludar? ¡No dudes en ponerte en contacto conmigo!
+				</p>
+			</div>
 		</SectionContainer>
 	</main>
 </Layout>

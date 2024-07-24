@@ -47,7 +47,7 @@ const navItems = [
 	}
 ]
 ---
-<div class="py-2 px-10 flex items-center justify-center fixed bottom-0 w-full z-10">
+<header class="py-2 px-10 flex items-center justify-center fixed bottom-0 w-full z-10">
 	<nav class="rounded flex items-center bg-gray-200 dark:bg-[#0d0613]">
 		<ul
 			id="menu-list"
@@ -70,7 +70,7 @@ const navItems = [
 		class="absolute bg-gray-900/10 dark:bg-white/10 rounded left-[var(--left)] w-[var(--width)] h-[var(--height)] transition-all duration-300 ease-in-out opacity-0 z-[12]"
 	>
 	</div>
-</div>
+</header>
 <script>
 	const listItem = document.querySelectorAll(".menu-item")
 	const menuBackdrop = document.querySelector("#menu-backdrop") as HTMLElement
