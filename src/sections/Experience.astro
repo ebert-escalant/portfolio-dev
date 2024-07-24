@@ -1,0 +1,14 @@
+---
+import { experience } from "@/utils/experience"
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-500">
+	{experience.map((item, index) => (
+		<li class="mb-10 ms-4">
+			<div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-[6.5px] dark:bg-gray-500"></div>
+			<time class="mb-1 text-sm font-normal leading-none dark:text-gray-400">{item.date}</time>
+			<h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">{item.title}</h3>
+			<h3 class="font-medium text-gray-900 dark:text-white">{item.company}</h3>
+			<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300">{item.description}</p>
+		</li>
+	))}
+</ol>

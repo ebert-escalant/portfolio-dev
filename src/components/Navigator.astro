@@ -1,0 +1,94 @@
+---
+import Home from "@icons/Home.astro"
+import Briefcase from "@icons/Briefcase.astro"
+import Code from "@icons/Code.astro"
+import Sliders from "@icons/Sliders.astro"
+import MessageCode from "@icons/MessageCode.astro"
+import School from "@icons/School.astro"
+
+import ThemeToogle from "./ThemeToogle.astro"
+
+const navItems = [
+	{
+		title: "Sobre mi",
+		label: "about",
+		url: "#about",
+		icon: Home
+	},
+	{
+		title: "Experiencia",
+		label: "experience",
+		url: "#experience",
+		icon: Briefcase
+	},
+	{
+		title: "Proyectos",
+		label: "projects",
+		url: "#projects",
+		icon: Code,
+	},
+	{
+		title: "Educación",
+		label: "education",
+		url: "#education",
+		icon: School,
+	},
+	{
+		title: "Skills",
+		label: "skills",
+		url: "#skills",
+		icon: Sliders,
+	},
+	{
+		title: "Contacto",
+		label: "contact",
+		url: "#contact",
+		icon: MessageCode,
+	}
+]
+---
+<div class="py-2 px-10 flex items-center justify-center fixed bottom-0 w-full z-10">
+	<nav class="rounded flex items-center bg-gray-200 dark:bg-[#0d0613]">
+		<ul
+			id="menu-list"
+			class="flex items-center justify-center text-sm"
+		>
+			{
+				navItems.map((item) => (
+					<li class="menu-item z-[13] flex items-center">
+						<a href={item.url} aria-label={item.label} class="uppercase font-medium inline-block h-full px-4 py-2 outline-none">
+							<item.icon class="w-6 h-6" />
+						</a>
+					</li>
+				))
+			}
+			<ThemeToogle />
+		</ul>
+	</nav>
+	<div
+		id="menu-backdrop"
+		class="absolute bg-gray-900/10 dark:bg-white/10 rounded left-[var(--left)] w-[var(--width)] h-[var(--height)] transition-all duration-300 ease-in-out opacity-0 z-[12]"
+	>
+	</div>
+</div>
+<script>
+	const listItem = document.querySelectorAll(".menu-item")
+	const menuBackdrop = document.querySelector("#menu-backdrop") as HTMLElement
+
+	listItem.forEach((item) => {
+		item.addEventListener("mouseenter", () => {
+			const { left, width, height } = item.getBoundingClientRect()
+
+			menuBackdrop.style.setProperty("--left", `${left}px`)
+			menuBackdrop.style.setProperty("--width", `${width}px`)
+			menuBackdrop.style.setProperty("--height", `${height}px`)
+			menuBackdrop.style.opacity = "1"
+			menuBackdrop.style.visibility = "visible"
+		})
+
+		item.addEventListener("mouseleave", () => {
+			menuBackdrop.style.opacity = "0"
+			menuBackdrop.style.visibility = "hidden"
+		})
+	})
+</script>
