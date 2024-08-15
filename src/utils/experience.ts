@@ -10,7 +10,7 @@ export const experience: Experience[] = [
 		date: 'Abril 2023 - Octubre 2023',
 		title: 'Analista programador',
 		company: 'CODIDEEP E.I.R.L.',
-		description: 'Responsable del desarrollo y mantenimiento de diferentes aplicaciones web y móviles para la empresa y sus clientes en diferentes tecnologías como React, React Native, Node.js, Express.js, MongoDB, entre otras.'
+		description: 'Responsable del desarrollo y mantenimiento de diferentes aplicaciones web y móviles para la empresa y sus clientes en diferentes tecnologías como Laravel, NodeJS, Angular, NestJS, MongoDB, SQLServer, MySQL, SocketIO, entre otras.'
 	},
 	{
 		date: 'Noviembre 2022 - Marzo 2023',
