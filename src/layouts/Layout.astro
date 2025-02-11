@@ -1,6 +1,6 @@
 ---
 import "@fontsource-variable/roboto-condensed";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import Navigator from "../components/Navigator.astro";
 
 interface Props {
@@ -17,9 +17,10 @@ const { title, description } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="keywords" content="Ebert Escalante, Ingeniería Informática, Desarrollador Web, Portafolio" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
-		<ViewTransitions />
+		<ClientRouter />
 	</head>
 	<body class="relative text-black dark:text-white min-h-screen w-full overflow-y-auto">
 		<div class="fixed top-0 z-[-2] h-screen w-screen bg-gray-50 dark:bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.25),rgba(255,255,255,0))]"></div>
