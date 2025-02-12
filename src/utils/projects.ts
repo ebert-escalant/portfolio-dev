@@ -22,7 +22,7 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-	{
+	/* {
 		title: 'Clon de spotify',
 		description: 'Clon de la página principal de Spotify.',
 		image: '/spotify-clone.webp',
@@ -42,7 +42,7 @@ export const projects: Project[] = [
 				icon: Tailwind
 			}
 		]
-	},
+	}, */
 	{
 		title: 'Chat App',
 		description: 'Aplicación de mensajería en tiempo real.',
