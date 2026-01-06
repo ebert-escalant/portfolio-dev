@@ -8,7 +8,7 @@ interface Experience {
 
 export const experience: Experience[] = [
 	{
-		date: 'Agosto 2024 - Enero 2025',
+		date: 'Agosto 2024 - Enero 2026',
 		title: 'Analista programador y Líder de equipo de Frontend',
 		company: 'RUWAY TECH',
 		description: 'Frontend Developer | Angular | React ',

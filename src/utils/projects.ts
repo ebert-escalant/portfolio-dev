@@ -45,7 +45,7 @@ export const projects: Project[] = [
 	}, */
 	{
 		title: 'Chat App',
-		description: 'Aplicación de mensajería en tiempo real.',
+		description: 'Aplicación de mensajería en tiempo real utilizando Socket.io.',
 		image: '/realtime-message.webp',
 		url: 'https://appclientchat.vercel.app/',
 		tags: [
